@@ -9,6 +9,9 @@ body {
 
 .calculator {
     display: grid;
+    padding:10px;
+    grid-template-columns: repeat(4), auto;
+    grid-template-rows: repeat(7), auto;
     background-color: black;
     border-radius: 25px;
     width: 400px;
@@ -16,5 +19,10 @@ body {
 }
 
 .screen {
-    background-color: d1d1d1;
+    background-color: #d1d1d1;
+    border-radius: 25px;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
