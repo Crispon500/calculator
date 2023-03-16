@@ -1,0 +1,20 @@
+body {
+    background-color: #9cadce;
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+}
+
+.calculator {
+    display: grid;
+    background-color: black;
+    border-radius: 25px;
+    width: 400px;
+    height: 600px;
+}
+
+.screen {
+    background-color: d1d1d1;
+}
