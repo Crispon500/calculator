@@ -11,8 +11,8 @@ body {
     display: grid;
     padding:10px;
     gap: 10px;
-    grid-template-columns: 4, auto;
-    grid-template-rows: 7, auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     background-color: black;
     border-radius: 25px;
     width: 400px;
@@ -23,9 +23,9 @@ body {
     background-color: #d1d1d1;
     border-radius: 25px;
     grid-column-start: 1;
-    grid-column-end: 1;
+    grid-column-end: 5;
     grid-row-start: 1;
-    grid-row-end: 1;
+    grid-row-end: 3;
 }
 
 .button {
