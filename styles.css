@@ -13,8 +13,9 @@ body {
     gap: 10px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    background-color: black;
+    background-color: #778899;
     border-radius: 25px;
+    box-shadow: 5px 10px #2F4F4F;
     width: 400px;
     height: 600px;
 }
@@ -29,7 +30,7 @@ body {
 }
 
 .button {
-    background-color: #d1d1d1;
+    background-color: #DCDCDC;
     border-radius: 25px;
     text-align: center;
 }
