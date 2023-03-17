@@ -30,7 +30,7 @@ sevenButton.onclick = () => {operand += '7'; updateScreen()};
 eightButton.onclick = () => {operand += '8'; updateScreen()};
 nineButton.onclick = () => {operand += '9'; updateScreen()};
 zeroButton.onclick = () => {operand += '0'; updateScreen()};
-decimalButton.onclick = () => {operand += '.'; updateScreen()};
+decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen()};
 clearButton.onclick = () => {operand = '0'; updateScreen()}
 
 //operation variables
