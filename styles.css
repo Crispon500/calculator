@@ -37,3 +37,8 @@ body {
     border-radius: 25px;
     text-align: center;
 }
+
+#back {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
