@@ -11,35 +11,60 @@ const eightButton = document.querySelector("#eight");
 const nineButton = document.querySelector("#nine");
 const zeroButton = document.querySelector("#zero");
 const decimalButton = document.querySelector("#decimal");
-const multiplyButton = document.querySelector("multiplation");
+const multiplyButton = document.querySelector("#multiplication");
 const divideButton = document.querySelector("#division");
-const subtractButton = document.querySelector("#subtration");
+const subtractButton = document.querySelector("#subtraction");
 const additionButton = document.querySelector("#addition");
 const equalButton = document.querySelector("#equate");
 const clearButton = document.querySelector("#clear");
 const screenText = document.getElementById("screen-text");
 
 //give the buttons actions
-oneButton.onclick= () => {operand += '1'; updateScreen()};
-twoButton.onclick = () => {operand += '2'; updateScreen()};
-threeButton.onclick = () => {operand += '3'; updateScreen()};
-fourButton.onclick = () => {operand += '4'; updateScreen()};
-fiveButton.onclick = () => {operand += '5'; updateScreen()};
-sixButton.onclick = () => {operand += '6'; updateScreen()};
-sevenButton.onclick = () => {operand += '7'; updateScreen()};
-eightButton.onclick = () => {operand += '8'; updateScreen()};
-nineButton.onclick = () => {operand += '9'; updateScreen()};
-zeroButton.onclick = () => {operand += '0'; updateScreen()};
-decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen()};
-clearButton.onclick = () => {operand = '0'; updateScreen()};
+oneButton.onclick= () => {operand += '1'; updateScreen(operand)};
+twoButton.onclick = () => {operand += '2'; updateScreen(operand)};
+threeButton.onclick = () => {operand += '3'; updateScreen(operand)};
+fourButton.onclick = () => {operand += '4'; updateScreen(operand)};
+fiveButton.onclick = () => {operand += '5'; updateScreen(operand)};
+sixButton.onclick = () => {operand += '6'; updateScreen(operand)};
+sevenButton.onclick = () => {operand += '7'; updateScreen(operand)};
+eightButton.onclick = () => {operand += '8'; updateScreen(operand)};
+nineButton.onclick = () => {operand += '9'; updateScreen(operand)};
+zeroButton.onclick = () => {operand += '0'; updateScreen(operand)};
+decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen(operand)};
+clearButton.onclick = () => {operand = '0'; operation = ''; result = 0; updateScreen(operand)};
+multiplyButton.onclick = () => evaluation("*");
+divideButton.onclick = () => evaluation("/");
+subtractButton.onclick = () => evaluation("-");
+additionButton.onclick = () => evaluation("+");
+equalButton.onclick = () => evaluation("=");
+
+
 
 //operation variables
-let operation = '';
+let result = 0;
 let operand = '';
 let operator = '';
 
-function updateScreen(){
-    operand = operand.substring(0,17);
-    let text = operand;
-    screenText.innerText = parseFloat(text);
+function updateScreen(num){
+    screenText.innerText = parseFloat(num.substring(0,17));
+}
+
+function evaluation(operation){
+    switch (operation){
+        case "*":
+            console.log("test");
+            break;
+        case "/":
+            console.log("test");
+            break;
+        case "-":
+            console.log("test");
+            break;
+        case "+":
+            console.log("test");
+            break;
+        case "=":
+            console.log("test");
+            break;
+    }
 }
