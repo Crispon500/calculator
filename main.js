@@ -31,15 +31,15 @@ eightButton.onclick = () => {operand += '8'; updateScreen()};
 nineButton.onclick = () => {operand += '9'; updateScreen()};
 zeroButton.onclick = () => {operand += '0'; updateScreen()};
 decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen()};
-clearButton.onclick = () => {operand = '0'; updateScreen()}
+clearButton.onclick = () => {operand = '0'; updateScreen()};
 
 //operation variables
-let decimal = false;
 let operation = '';
 let operand = '';
 let operator = '';
 
-function updateScreen(num){
+function updateScreen(){
     operand = operand.substring(0,17);
-    screenText.innerText = operand;
+    let text = operand;
+    screenText.innerText = parseFloat(text);
 }
