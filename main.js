@@ -31,16 +31,17 @@ eightButton.onclick = () => {operand += '8'; updateScreen(operand)};
 nineButton.onclick = () => {operand += '9'; updateScreen(operand)};
 zeroButton.onclick = () => {operand += '0'; updateScreen(operand)};
 decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen(operand)};
-clearButton.onclick = () => {operand = '0'; operation = ''; result = 0; updateScreen(operand)};
-multiplyButton.onclick = () => evaluation("*");
+clearButton.onclick = () => {baseOperand = ''; operand = '0'; operator = ''; result = 0; updateScreen(operand)};
+multiplyButton.onclick = () => operation("*");
 divideButton.onclick = () => evaluation("/");
 subtractButton.onclick = () => evaluation("-");
 additionButton.onclick = () => evaluation("+");
-equalButton.onclick = () => evaluation("=");
+equalButton.onclick = () => operate(baseOperand,operand,operator);
 
 
 
 //operation variables
+let baseOperand = '';
 let result = 0;
 let operand = '';
 let operator = '';
@@ -49,22 +50,23 @@ function updateScreen(num){
     screenText.innerText = parseFloat(num.substring(0,17));
 }
 
-function evaluation(operation){
-    switch (operation){
+function operate(StrA,StrB,op){
+    a = parseFloat(StrA);
+    b = parseFloat(StrB);
+    switch (op){
         case "*":
-            console.log("test");
-            break;
-        case "/":
-            console.log("test");
-            break;
-        case "-":
-            console.log("test");
-            break;
-        case "+":
-            console.log("test");
-            break;
-        case "=":
-            console.log("test");
+            result = a * b;
+            updateScreen(result.toString());
             break;
     }
+}
+
+function operation(op){
+    operator = op;
+    if(baseOperand === ''){
+        baseOperand = operand;
+    } else{
+        baseOperand = result.toString();
+    }
+    operand = '';
 }
