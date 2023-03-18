@@ -33,9 +33,9 @@ zeroButton.onclick = () => {operand += '0'; updateScreen(operand)};
 decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen(operand)};
 clearButton.onclick = () => {baseOperand = ''; operand = '0'; operator = ''; result = 0; updateScreen(operand)};
 multiplyButton.onclick = () => operation("*");
-divideButton.onclick = () => evaluation("/");
-subtractButton.onclick = () => evaluation("-");
-additionButton.onclick = () => evaluation("+");
+divideButton.onclick = () => operation("/");
+subtractButton.onclick = () => operation("-");
+additionButton.onclick = () => operation("+");
 equalButton.onclick = () => operate(baseOperand,operand,operator);
 
 
@@ -56,6 +56,10 @@ function operate(StrA,StrB,op){
     switch (op){
         case "*":
             result = a * b;
+            updateScreen(result.toString());
+            break;
+        case "/":
+            result = a/b;
             updateScreen(result.toString());
             break;
     }
