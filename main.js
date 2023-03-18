@@ -31,7 +31,7 @@ eightButton.onclick = () => {operand += '8'; updateScreen(operand)};
 nineButton.onclick = () => {operand += '9'; updateScreen(operand)};
 zeroButton.onclick = () => {operand += '0'; updateScreen(operand)};
 decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen(operand)};
-clearButton.onclick = () => {baseOperand = ''; operand = '0'; operator = ''; result = 0; updateScreen(operand)};
+clearButton.onclick = () => clear();
 multiplyButton.onclick = () => operation("*");
 divideButton.onclick = () => operation("/");
 subtractButton.onclick = () => operation("-");
@@ -85,4 +85,12 @@ function operation(op){
         baseOperand = result.toString();
     }
     operand = '';
+}
+
+function clear(){
+    baseOperand = ''; 
+    operand = '0'; 
+    operator = ''; 
+    result = 0; 
+    updateScreen(operand);
 }
