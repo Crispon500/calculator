@@ -66,6 +66,10 @@ function operate(StrA,StrB,op){
             result = a-b;
             updateScreen(result.toString());
             break;
+        case "+":
+            result = a+b;
+            updateScreen(result.toString());
+            break;
     }
 }
 
