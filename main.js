@@ -59,6 +59,10 @@ function operate(StrA,StrB,op){
             updateScreen(result.toString());
             break;
         case "/":
+            if(b === 0){
+                screenText.innerText = "ERROR";
+                return;
+            }
             result = a/b;
             updateScreen(result.toString());
             break;
