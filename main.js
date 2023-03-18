@@ -45,6 +45,7 @@ let baseOperand = '';
 let result = 0;
 let operand = '';
 let operator = '';
+let error = false;
 
 function updateScreen(num){
     screenText.innerText = parseFloat(num.substring(0,17));
@@ -61,6 +62,7 @@ function operate(StrA,StrB,op){
         case "/":
             if(b === 0){
                 screenText.innerText = "ERROR";
+                error = true;
                 return;
             }
             result = a/b;
@@ -92,5 +94,6 @@ function clear(){
     operand = '0'; 
     operator = ''; 
     result = 0; 
+    error = false;
     updateScreen(operand);
 }
