@@ -80,12 +80,15 @@ function operate(StrA,StrB,op){
 }
 
 function operation(op){
-    operator = op;
+    
     if(baseOperand === ''){
         baseOperand = operand;
     } else{
+        operate(baseOperand,operand,operator);
         baseOperand = result.toString();
+        updateScreen(baseOperand);
     }
+    operator = op;
     operand = '';
 }
 
