@@ -18,6 +18,7 @@ const additionButton = document.querySelector("#addition");
 const equalButton = document.querySelector("#equate");
 const clearButton = document.querySelector("#clear");
 const screenText = document.getElementById("screen-text");
+const backButton = document.querySelector("#back");
 
 //give the buttons actions
 oneButton.onclick= () => {operand += '1'; updateScreen(operand)};
@@ -32,6 +33,7 @@ nineButton.onclick = () => {operand += '9'; updateScreen(operand)};
 zeroButton.onclick = () => {operand += '0'; updateScreen(operand)};
 decimalButton.onclick = () => {if(!operand.includes(".")){operand += '.'}; updateScreen(operand)};
 clearButton.onclick = () => clear();
+backButton.onclick = () => back();
 multiplyButton.onclick = () => operation("*");
 divideButton.onclick = () => operation("/");
 subtractButton.onclick = () => operation("-");
@@ -102,4 +104,8 @@ function clearValues(){
 function clear(){
     clearValues();
     updateScreen(result.toString());
+}
+
+function back(str){
+
 }
