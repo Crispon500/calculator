@@ -106,6 +106,12 @@ function clear(){
     updateScreen(result.toString());
 }
 
-function back(str){
-
+function back(){
+    if(operand !== ''){
+        operand = operand.slice(0,-1);
+        updateScreen(operand);
+    }
+    if(operand === ''){
+        updateScreen("0");
+    }
 }
